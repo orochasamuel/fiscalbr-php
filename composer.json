@@ -1,0 +1,38 @@
+{
+  "name": "fiscalbr/fiscalbr-php",
+  "description": "Biblioteca comum com classes utilitárias e componentes compartilhados entre os módulos FiscalBr.",
+  "type": "library",
+  "license": "MIT",
+  "homepage": "https://github.com/orochasamuel/fiscalbr-php",
+  "authors": [
+    {
+      "name": "Samuel Rocha",
+      "email": "samuelro.net@gmail.com"
+    }
+  ],
+  "keywords": [
+    "fiscalbr",
+    "core",
+    "sped",
+    "efd",
+    "brasil"
+  ],
+  "autoload": {
+    "psr-4": {
+      "FiscalBr\\": "src/"
+    }
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "Tests\\": "tests/"
+    }
+  },
+  "minimum-stability": "stable",
+  "require": {
+    "php": ">=8.0"
+  },
+  "require-dev": {
+    "phpunit/phpunit": "^11.5"
+  },
+  "version": "1.0.0-beta1"
+}
