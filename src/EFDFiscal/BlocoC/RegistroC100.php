@@ -254,9 +254,10 @@ class RegistroC100 extends RegistroSped
         return $this->DtEs;
     }
 
-    public function comValorDocumento(Decimal $value): self
+    public function comValorDocumento(float|string $value): self
     {
-        $this->VlDoc = $value;
+        $newValue = new Decimal($value);
+        $this->VlDoc = $newValue;
         return $this;
     }
 
