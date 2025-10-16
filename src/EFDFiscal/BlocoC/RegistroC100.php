@@ -254,7 +254,7 @@ class RegistroC100 extends RegistroSped
         return $this->DtEs;
     }
 
-    public function comValorDocumento(float|string $value): self
+    public function comValorDocumento(Decimal|float|string $value): self
     {
         $newValue = new Decimal($value);
         $this->VlDoc = $newValue;
@@ -277,9 +277,10 @@ class RegistroC100 extends RegistroSped
         return $this->IndPgto;
     }
 
-    public function comValorDesconto(?Decimal $value): self
+    public function comValorDesconto(Decimal|float|string $value): self
     {
-        $this->VlDesc = $value;
+        $newValue = new Decimal($value);
+        $this->VlDesc = $newValue;
         return $this;
     }
 
@@ -288,9 +289,10 @@ class RegistroC100 extends RegistroSped
         return $this->VlDesc;
     }
 
-    public function comValorAbatimentoNaoTributado(?Decimal $value): self
+    public function comValorAbatimentoNaoTributado(Decimal|float|string $value): self
     {
-        $this->VlAbatNt = $value;
+        $newValue = new Decimal($value);
+        $this->VlAbatNt = $newValue;
         return $this;
     }
 
@@ -299,9 +301,10 @@ class RegistroC100 extends RegistroSped
         return $this->VlAbatNt;
     }
 
-    public function comValorMercadoria(?Decimal $value): self
+    public function comValorMercadoria(Decimal|float|string $value): self
     {
-        $this->VlMerc = $value;
+        $newValue = new Decimal($value);
+        $this->VlMerc = $newValue;
         return $this;
     }
 
@@ -321,9 +324,10 @@ class RegistroC100 extends RegistroSped
         return $this->IndFrt;
     }
 
-    public function comValorFrete(?Decimal $value): self
+    public function comValorFrete(Decimal|float|string $value): self
     {
-        $this->VlFrt = $value;
+        $newValue = new Decimal($value);
+        $this->VlFrt = $newValue;
         return $this;
     }
 
@@ -332,9 +336,10 @@ class RegistroC100 extends RegistroSped
         return $this->VlFrt;
     }
 
-    public function comValorSeguro(?Decimal $value): self
+    public function comValorSeguro(Decimal|float|string $value): self
     {
-        $this->VlSeg = $value;
+        $newValue = new Decimal($value);
+        $this->VlSeg = $newValue;
         return $this;
     }
 
@@ -343,9 +348,10 @@ class RegistroC100 extends RegistroSped
         return $this->VlSeg;
     }
 
-    public function comValorOutrasDespesasAcessorias(?Decimal $value): self
+    public function comValorOutrasDespesasAcessorias(Decimal|float|string $value): self
     {
-        $this->VlOutDa = $value;
+        $newValue = new Decimal($value);
+        $this->VlOutDa = $newValue;
         return $this;
     }
 
@@ -354,9 +360,10 @@ class RegistroC100 extends RegistroSped
         return $this->VlOutDa;
     }
 
-    public function comValorBaseCalculoIcms(?Decimal $value): self
+    public function comValorBaseCalculoIcms(Decimal|float|string $value): self
     {
-        $this->VlBcIcms = $value;
+        $newValue = new Decimal($value);
+        $this->VlBcIcms = $newValue;
         return $this;
     }
 
@@ -365,9 +372,10 @@ class RegistroC100 extends RegistroSped
         return $this->VlBcIcms;
     }
 
-    public function comValorIcms(?Decimal $value): self
+    public function comValorIcms(Decimal|float|string $value): self
     {
-        $this->VlIcms = $value;
+        $newValue = new Decimal($value);
+        $this->VlIcms = $newValue;
         return $this;
     }
 
@@ -376,9 +384,10 @@ class RegistroC100 extends RegistroSped
         return $this->VlIcms;
     }
 
-    public function comValorBaseCalculoIcmsSt(?Decimal $value): self
+    public function comValorBaseCalculoIcmsSt(Decimal|float|string $value): self
     {
-        $this->VlBcIcmsSt = $value;
+        $newValue = new Decimal($value);
+        $this->VlBcIcmsSt = $newValue;
         return $this;
     }
 
@@ -387,9 +396,10 @@ class RegistroC100 extends RegistroSped
         return $this->VlBcIcmsSt;
     }
 
-    public function comValorIcmsSt(?Decimal $value): self
+    public function comValorIcmsSt(Decimal|float|string $value): self
     {
-        $this->VlIcmsSt = $value;
+        $newValue = new Decimal($value);
+        $this->VlIcmsSt = $newValue;
         return $this;
     }
 
@@ -398,9 +408,10 @@ class RegistroC100 extends RegistroSped
         return $this->VlIcmsSt;
     }
 
-    public function comValorIpi(?Decimal $value): self
+    public function comValorIpi(Decimal|float|string $value): self
     {
-        $this->VlIpi = $value;
+        $newValue = new Decimal($value);
+        $this->VlIpi = $newValue;
         return $this;
     }
 
@@ -409,9 +420,10 @@ class RegistroC100 extends RegistroSped
         return $this->VlIpi;
     }
 
-    public function comValorPis(?Decimal $value): self
+    public function comValorPis(Decimal|float|string $value): self
     {
-        $this->VlPis = $value;
+        $newValue = new Decimal($value);
+        $this->VlPis = $newValue;
         return $this;
     }
 
@@ -420,9 +432,10 @@ class RegistroC100 extends RegistroSped
         return $this->VlPis;
     }
 
-    public function comValorCofins(?Decimal $value): self
+    public function comValorCofins(Decimal|float|string $value): self
     {
-        $this->VlCofins = $value;
+        $newValue = new Decimal($value);
+        $this->VlCofins = $newValue;
         return $this;
     }
 
@@ -431,9 +444,10 @@ class RegistroC100 extends RegistroSped
         return $this->VlCofins;
     }
 
-    public function comValorPisSt(?Decimal $value): self
+    public function comValorPisSt(Decimal|float|string $value): self
     {
-        $this->VlPisSt = $value;
+        $newValue = new Decimal($value);
+        $this->VlPisSt = $newValue;
         return $this;
     }
 
@@ -442,9 +456,10 @@ class RegistroC100 extends RegistroSped
         return $this->VlPisSt;
     }
 
-    public function comValorCofinsSt(?Decimal $value): self
+    public function comValorCofinsSt(Decimal|float|string $value): self
     {
-        $this->VlCofinsSt = $value;
+        $newValue = new Decimal($value);
+        $this->VlCofinsSt = $newValue;
         return $this;
     }
 
