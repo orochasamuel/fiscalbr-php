@@ -3,7 +3,7 @@
 /**
  * Classe para representar valores decimais com precisão
  */
-class Decimal
+final class Decimal
 {
     private string $value;
     private int $precision;
