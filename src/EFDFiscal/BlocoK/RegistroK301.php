@@ -3,7 +3,7 @@
 namespace FiscalBr\EFDFiscal\BlocoK;
 
 use DateTime;
-use Decimal;
+use FiscalBr\Core\Utils\Decimal;
 use FiscalBr\Core\Sped\SpedCampos;
 use FiscalBr\Core\Sped\RegistroSped;
 

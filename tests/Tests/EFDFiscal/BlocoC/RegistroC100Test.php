@@ -3,10 +3,10 @@
 namespace Tests\EFDFiscal\BlocoC;
 
 //require_once __DIR__ . '/../../../../vendor/autoload.php';
-require_once __DIR__ . '/../../../../src/Core/Decimal.php';
+require_once __DIR__ . '/../../../../src/Core/Utils/Decimal.php';
 
 use DateTime;
-use Decimal;
+use FiscalBr\Core\Utils\Decimal;
 use FiscalBr\Core\Sped\EscreverCamposSped;
 use FiscalBr\EFDFiscal\ArquivoEFDFiscal;
 use FiscalBr\EFDFiscal\BlocoC\RegistroC100;

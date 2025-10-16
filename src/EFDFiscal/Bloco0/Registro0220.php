@@ -2,7 +2,7 @@
 
 namespace FiscalBr\EFDFiscal\Bloco0;
 
-use Decimal;
+use FiscalBr\Core\Utils\Decimal;
 use FiscalBr\Core\Sped\SpedCampos;
 use FiscalBr\Core\Sped\RegistroSped;
 

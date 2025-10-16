@@ -2,7 +2,7 @@
 
 namespace FiscalBr\Core\Sped;
 
-use Decimal;
+use FiscalBr\Core\Utils\Decimal;
 use FiscalBr\Core\Constantes;
 use FiscalBr\Core\Sped\SpedCampos;
 
@@ -176,8 +176,8 @@ class EscreverCamposSped
     private static function obtemTipoDaPropriedade(\ReflectionProperty $property): string
     {
         $type = (string)$property->getType();
-        if ($type === "Decimal") return "Decimal";
-        if ($type === "?Decimal") return "NullableDecimal";
+        if ($type === "FiscalBr\Core\Utils\Decimal") return "Decimal";
+        if ($type === "?FiscalBr\Core\Utils\Decimal") return "NullableDecimal";
         if ($type === "float") return "Decimal";
         if ($type === "?float") return "NullableDecimal";
         if ($type === "\DateTime") return "DateTime";

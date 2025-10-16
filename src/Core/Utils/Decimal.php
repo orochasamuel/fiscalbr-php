@@ -1,5 +1,10 @@
 <?php
 
+namespace FiscalBr\Core\Utils;
+
+use InvalidArgumentException;
+use DivisionByZeroError;
+
 /**
  * Classe para representar valores decimais com precisão
  */
@@ -52,6 +57,9 @@ final class Decimal
                 "Máximo de {$maxIntegerDigits} dígitos inteiros."
             );
         }
+
+        //substitui . por ,
+        //$normalized = str_replace('.', ',', $normalized);
 
         return $normalized;
     }
@@ -192,7 +200,7 @@ final class Decimal
     /**
      * Factory method para criar a partir de string
      */
-    public static function fromString(string $value, int $precision = 8, int $scale = 2): self
+    public static function fromString(string $value, int $precision = 15, int $scale = 2): self
     {
         return new self($value, $precision, $scale);
     }
