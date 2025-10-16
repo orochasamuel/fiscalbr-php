@@ -109,4 +109,49 @@ class Registro1001 extends RegistroSped
     {
         $this->IndMov = $value;
     }
+
+    public function verificaSeBlocoPossuiDados(): bool
+    {
+        return
+            count($this->Registros1100) > 0 ||
+            count($this->Registros1200) > 0 ||
+            count($this->Registros1300) > 0 ||
+            count($this->Registros1350) > 0 ||
+            count($this->Registros1390) > 0 ||
+            count($this->Registros1400) > 0 ||
+            count($this->Registros1500) > 0 ||
+            count($this->Registros1600) > 0 ||
+            count($this->Registros1601) > 0 ||
+            count($this->Registros1700) > 0 ||
+            count($this->Registros1900) > 0 ||
+            count($this->Registros1960) > 0 ||
+            count($this->Registros1970) > 0;
+    }
+
+    public function adicionarUmRegistroC100(Registro1100 $value, string $chave): void
+    {
+        $this->Registros1100[$chave] = $value;
+
+        $this->temMovimento($this->verificaSeBlocoPossuiDados());
+    }
+
+    public function removerUmRegistroC100(string $chave): void
+    {
+        unset($this->Registros1100[$chave]);
+
+        $this->temMovimento($this->verificaSeBlocoPossuiDados());
+    }
+
+    public function obterUmRegistro1100(string $chave): ?Registro1100
+    {
+        return $this->Registros1100[$chave] ?? null;
+    }
+    
+    /**
+     * @return Registro1100[]
+     */
+    public function obterTodosRegistros1100(): array
+    {
+        return $this->Registros1100;
+    }
 }

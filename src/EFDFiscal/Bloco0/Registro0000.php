@@ -86,7 +86,7 @@ class Registro0000 extends RegistroSped
         $this->IndAtiv = $indicadorAtividade;
     }
 
-    private function inicializarVazio(): void
+    private function inicializar(): void
     {
         $this->CodVer ??= 1; // Versão do leiaute
         $this->CodFin ??= 0;

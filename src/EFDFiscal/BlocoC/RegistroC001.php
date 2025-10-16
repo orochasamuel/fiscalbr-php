@@ -91,7 +91,17 @@ class RegistroC001 extends RegistroSped
 
     public function verificaSeBlocoPossuiDados(): bool
     {
-        return count($this->RegistrosC100) > 0;
+        return
+            count($this->RegistrosC100) > 0 ||
+            count($this->RegistrosC300) > 0 ||
+            count($this->RegistrosC350) > 0 ||
+            count($this->RegistrosC400) > 0 ||
+            count($this->RegistrosC495) > 0 ||
+            count($this->RegistrosC500) > 0 ||
+            count($this->RegistrosC600) > 0 ||
+            count($this->RegistrosC700) > 0 ||
+            count($this->RegistrosC800) > 0 ||
+            count($this->RegistrosC860) > 0;
     }
 
     public function adicionarUmRegistroC100(RegistroC100 $value, string $chave): void
@@ -135,6 +145,9 @@ class RegistroC001 extends RegistroSped
         return $this->RegistrosC100[$chave] ?? null;
     }
 
+    /**
+     * @return RegistroC100[]
+     */
     public function obterTodosRegistrosC100(): array
     {
         return $this->RegistrosC100;

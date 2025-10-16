@@ -99,7 +99,11 @@ class RegistroC100 extends RegistroSped
      * @var RegistroC170[] 
      */
     private array $RegistrosC170 = [];
-    // public array $RegistrosC190 = [];
+
+    /** 
+     * @var RegistroC190[] 
+     */
+    private array $RegistrosC190 = [];
 
     public function __construct()
     {
@@ -250,13 +254,13 @@ class RegistroC100 extends RegistroSped
         return $this->DtEs;
     }
 
-    public function comValorDocumento(?Decimal $value): self
+    public function comValorDocumento(Decimal $value): self
     {
         $this->VlDoc = $value;
         return $this;
     }
 
-    public function getVlDoc(): ?Decimal
+    public function getVlDoc(): Decimal
     {
         return $this->VlDoc;
     }
@@ -482,6 +486,45 @@ class RegistroC100 extends RegistroSped
     {
         foreach ($values as $value) {
             $this->removerUmRegistroC170($value);
+        }
+    }
+
+    public function obterTodosRegistrosC190(): array
+    {
+        return $this->RegistrosC190;
+    }
+
+    public function adicionarUmRegistroC190(RegistroC190 $value, string $sequencial): void
+    {
+        $this->RegistrosC190[$sequencial] = $value;
+    }
+
+    public function removerUmRegistroC190(string $sequencial): void
+    {
+        unset($this->RegistrosC190[$sequencial]);
+    }
+
+    /**
+     * @param RegistroC190[] $RegistrosC190
+     */
+    public function adicionarVariosRegistrosC190(array $values): void
+    {
+        $sequencial = 1;
+        foreach ($values as $value) {
+            if ($value instanceof RegistroC190) {
+                $this->adicionarUmRegistroC190($value, $sequencial);
+            }
+            $sequencial++;
+        }
+    }
+
+    /**
+     * @param string[] $values
+     */
+    public function removerVariosRegistrosC190(array $values): void
+    {
+        foreach ($values as $value) {
+            $this->removerUmRegistroC190($value);
         }
     }
 }
