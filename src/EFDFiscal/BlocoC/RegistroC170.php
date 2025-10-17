@@ -235,4 +235,73 @@ class RegistroC170 extends RegistroSped
     {
         return $this->NumItem;
     }
+
+    public function comCodigoItem(string $value): self
+    {
+        $this->CodItem = $value;
+        return $this;
+    }
+
+    public function getCodItem(): int
+    {
+        return $this->CodItem;
+    }
+
+    public function comDescricaoComplementar(string $value): self
+    {
+        $this->DescrCompl = $value;
+        return $this;
+    }
+
+    public function getDescrCompl(): int
+    {
+        return $this->DescrCompl;
+    }
+
+    public function comQuantidade(Decimal|float|string $value): self
+    {
+        $newValue = new Decimal($value);
+        $this->Qtd = $newValue;
+        return $this;
+    }
+
+    public function getQtd(): Decimal
+    {
+        return $this->Qtd;
+    }
+
+    public function comUnidadeMedida(string $value): self
+    {
+        $this->Unid = $value;
+        return $this;
+    }
+
+    public function getUnid(): int
+    {
+        return $this->Unid;
+    }
+
+    public function comValorItem(Decimal|float|string $value): self
+    {
+        $newValue = new Decimal($value);
+        $this->VlItem = $newValue;
+        return $this;
+    }
+
+    public function getVlItem(): Decimal
+    {
+        return $this->VlItem;
+    }
+
+    public function comValorDesconto(Decimal|float|string $value): self
+    {
+        $newValue = new Decimal($value);
+        $this->VlDesc = $newValue;
+        return $this;
+    }
+
+    public function getDesc(): Decimal
+    {
+        return $this->VlDesc;
+    }
 }
