@@ -72,55 +72,55 @@ class RegistroC170 extends RegistroSped
     public string $CodEnq;
 
     #[SpedCampos(22, "VL_BC_IPI", "N", 15, 2, false, 2)]
-    public ?Decimal $VlBcIpi;
+    public Decimal $VlBcIpi;
 
     #[SpedCampos(23, "ALIQ_IPI", "N", 6, 2, false, 2)]
-    public ?Decimal $AliqIpi;
+    public Decimal $AliqIpi;
 
     #[SpedCampos(24, "VL_IPI", "N", 15, 2, false, 2)]
-    public ?Decimal $VlIpi;
+    public Decimal $VlIpi;
 
     #[SpedCampos(25, "CST_PIS", "N", 2, 0, false, 2)]
-    public ?int $CstPis;
+    public string $CstPis;
 
     #[SpedCampos(26, "VL_BC_PIS", "N", 15, 2, false, 2)]
-    public ?Decimal $VlBcPis;
+    public Decimal $VlBcPis;
 
     #[SpedCampos(27, "ALIQ_PIS", "N", 8, 4, false, 2)]
-    public ?Decimal $AliqPis;
+    public Decimal $AliqPis;
 
     #[SpedCampos(28, "QUANT_BC_PIS", "N", 15, 3, false, 2)]
-    public ?Decimal $QuantBcPis;
+    public Decimal $QuantBcPis;
 
     #[SpedCampos(29, "ALIQ_PIS", "N", 8, 4, false, 2)]
-    public ?Decimal $AliqPisReais;
+    public Decimal $AliqPisReais;
 
     #[SpedCampos(30, "VL_PIS", "N", 15, 2, false, 2)]
-    public ?Decimal $VlPis;
+    public Decimal $VlPis;
 
     #[SpedCampos(31, "CST_COFINS", "N", 2, 0, false, 2)]
-    public ?int $CstCofins;
+    public string $CstCofins;
 
     #[SpedCampos(32, "VL_BC_COFINS", "N", 15, 2, false, 2)]
-    public ?Decimal $VlBcCofins;
+    public Decimal $VlBcCofins;
 
     #[SpedCampos(33, "ALIQ_COFINS", "N", 8, 4, false, 2)]
-    public ?Decimal $AliqCofins;
+    public Decimal $AliqCofins;
 
     #[SpedCampos(34, "QUANT_BC_COFINS", "N", 15, 3, false, 2)]
-    public ?Decimal $QuantBcCofins;
+    public Decimal $QuantBcCofins;
 
     #[SpedCampos(35, "ALIQ_COFINS", "N", 8, 4, false, 2)]
-    public ?Decimal $AliqCofinsReais;
+    public Decimal $AliqCofinsReais;
 
     #[SpedCampos(36, "VL_COFINS", "N", 15, 2, false, 2)]
-    public ?Decimal $VlCofins;
+    public Decimal $VlCofins;
 
     #[SpedCampos(37, "COD_CTA", "C", 999, 0, false, 2)]
     public string $CodCta;
 
     #[SpedCampos(38, "VL_ABAT_NT", "N", 15, 2, false, 2)]
-    public ?Decimal $VlAbatNt;
+    public Decimal $VlAbatNt;
 
     /** 
      * @var RegistroC171[] 
@@ -206,23 +206,23 @@ class RegistroC170 extends RegistroSped
         $this->IndApur = 0;
         $this->CstIpi = '';
         $this->CodEnq = '';
-        $this->VlBcIpi = null;
-        $this->AliqIpi = null;
-        $this->VlIpi = null;
-        $this->CstPis = null;
-        $this->VlBcPis = null;
-        $this->AliqPis = null;
-        $this->QuantBcPis = null;
-        $this->AliqPisReais = null;
-        $this->VlPis = null;
-        $this->CstCofins = null;
-        $this->VlBcCofins = null;
-        $this->AliqCofins = null;
-        $this->QuantBcCofins = null;
-        $this->AliqCofinsReais = null;
-        $this->VlCofins = null;
+        $this->VlBcIpi = new Decimal(0);
+        $this->AliqIpi = new Decimal(0);
+        $this->VlIpi = new Decimal(0);
+        $this->CstPis = '';
+        $this->VlBcPis = new Decimal(0);
+        $this->AliqPis = new Decimal(0);
+        $this->QuantBcPis = new Decimal(0);
+        $this->AliqPisReais = new Decimal(0);
+        $this->VlPis = new Decimal(0);
+        $this->CstCofins = '';
+        $this->VlBcCofins = new Decimal(0);
+        $this->AliqCofins = new Decimal(0);
+        $this->QuantBcCofins = new Decimal(0);
+        $this->AliqCofinsReais = new Decimal(0);
+        $this->VlCofins = new Decimal(0);
         $this->CodCta = '';
-        $this->VlAbatNt = null;
+        $this->VlAbatNt = new Decimal(0);
     }
 
     public function comNumeroItem(int $value): self
