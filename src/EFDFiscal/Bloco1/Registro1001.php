@@ -112,7 +112,7 @@ class Registro1001 extends RegistroSped
 
     public function verificaSeBlocoPossuiDados(): bool
     {
-        return
+        return !is_null($this->registro1010) ||
             count($this->Registros1100) > 0 ||
             count($this->Registros1200) > 0 ||
             count($this->Registros1300) > 0 ||
@@ -128,14 +128,21 @@ class Registro1001 extends RegistroSped
             count($this->Registros1970) > 0;
     }
 
-    public function adicionarUmRegistroC100(Registro1100 $value, string $chave): void
+    public function adicionarUmRegistro1010(Registro1010 $value): void
+    {
+        $this->registro1010 = $value;
+
+        $this->temMovimento($this->verificaSeBlocoPossuiDados());
+    }
+
+    public function adicionarUmRegistro1100(Registro1100 $value, string $chave): void
     {
         $this->Registros1100[$chave] = $value;
 
         $this->temMovimento($this->verificaSeBlocoPossuiDados());
     }
 
-    public function removerUmRegistroC100(string $chave): void
+    public function removerUmRegistro1100(string $chave): void
     {
         unset($this->Registros1100[$chave]);
 

@@ -10,7 +10,7 @@ class RegistroK001 extends RegistroSped
     #[SpedCampos(2, "IND_MOV", "N", 1, 0, true, 2)]
     public int $IndMov;
 
-    public ?RegistroK010 $RegistroK010 = null;
+    private ?RegistroK010 $RegistroK010 = null;
 
     /** 
      * @var RegistroK100[]
