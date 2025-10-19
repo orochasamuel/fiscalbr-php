@@ -27,13 +27,18 @@ class EscreverCamposSped
             //return Constantes::CAMPO_OBRIGATORIO_NAO_INFORMADO;
         }
 
-        if ($isRequired && $tipoProp === "Decimal" && ($valorEscrever === "" || (float)$valorEscrever == 0)) {
+        if ($isRequired && $tipoProp === "Decimal" && ($valorEscrever === '' || (float)$valorEscrever == 0)) {
             return number_format(Constantes::VALOR_ZERO, $decimalPlaces, ",", "");
         }
 
         if (($tipoProp === "Decimal" || $tipoProp === "NullableDecimal") && $hasValue) {
             //return number_format((float)$valorEscrever, $decimalPlaces, ",", ""); // Original -> Problema de precisão
             $valorAtualEmDecimal = new Decimal($valorEscrever, $fieldLength, $decimalPlaces);
+            // SE NÃO É OBRIGATÓRIO INFORMAR NÃO DEVE RETORNAR VALOR PARA NÃO "SUJAR" O ARQUIVO
+            if (!$isRequired)
+            {
+                return '';
+            }
             return $valorAtualEmDecimal->format(",", "");
         }
 
