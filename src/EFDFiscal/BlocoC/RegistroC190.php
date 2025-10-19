@@ -10,13 +10,13 @@ use FiscalBr\Core\Sped\RegistroSped;
 class RegistroC190 extends RegistroSped
 {
     #[SpedCampos(2, "CST_ICMS", "N", 3, 0, true, 2)]
-    public int $CstIcms;
+    public string $CstIcms;
 
 
     ///     Código fiscal de operação e prestação do agrupamento de itens
 
     #[SpedCampos(3, "CFOP", "N", 4, 0, true, 2)]
-    public int $Cfop;
+    public string $Cfop;
 
 
     ///     Alíquota do ICMS
