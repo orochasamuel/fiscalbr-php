@@ -94,4 +94,78 @@ class Registro0001 extends RegistroSped
     {
         $this->IndMov = $value;
     }
+
+    public function verificaSeBlocoPossuiDados(): bool
+    {
+        return
+            !is_null($this->registro0002) ||
+            !is_null($this->registro0005) ||
+            count($this->Registros0015) > 0 ||
+            count($this->Registros0100) > 0 ||
+            count($this->Registros0150) > 0 ||
+            count($this->Registros0190) > 0 ||
+            count($this->Registros0200) > 0 ||
+            count($this->Registros0300) > 0 ||
+            count($this->Registros0400) > 0 ||
+            count($this->Registros0450) > 0 ||
+            count($this->Registros0460) > 0 ||
+            count($this->Registros0500) > 0 ||
+            count($this->Registros0600) > 0;
+    }
+
+    public function adicionarUmRegistro0002(Registro0002 $value): void
+    {
+        $this->registro0002 = $value;
+
+        $this->temMovimento($this->verificaSeBlocoPossuiDados());
+    }
+
+    public function adicionarUmRegistro0005(Registro0005 $value): void
+    {
+        $this->registro0005 = $value;
+
+        $this->temMovimento($this->verificaSeBlocoPossuiDados());
+    }
+
+    public function adicionarUmRegistro0150(Registro0150 $value, string $chave): void
+    {
+        $this->Registros0150[$chave] = $value;
+
+        $this->temMovimento($this->verificaSeBlocoPossuiDados());
+    }
+
+    public function removerUmRegistro0150(string $chave): void
+    {
+        unset($this->Registros0150[$chave]);
+
+        $this->temMovimento($this->verificaSeBlocoPossuiDados());
+    }
+
+    public function adicionarUmRegistro0190(Registro0190 $value, string $chave): void
+    {
+        $this->Registros0190[$chave] = $value;
+
+        $this->temMovimento($this->verificaSeBlocoPossuiDados());
+    }
+
+    public function removerUmRegistro0190(string $chave): void
+    {
+        unset($this->Registros0190[$chave]);
+
+        $this->temMovimento($this->verificaSeBlocoPossuiDados());
+    }
+
+    public function adicionarUmRegistro0200(Registro0200 $value, string $chave): void
+    {
+        $this->Registros0200[$chave] = $value;
+
+        $this->temMovimento($this->verificaSeBlocoPossuiDados());
+    }
+
+    public function removerUmRegistro0200(string $chave): void
+    {
+        unset($this->Registros0200[$chave]);
+
+        $this->temMovimento($this->verificaSeBlocoPossuiDados());
+    }
 }
