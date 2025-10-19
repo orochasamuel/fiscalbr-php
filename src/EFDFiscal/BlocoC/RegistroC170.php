@@ -36,10 +36,10 @@ class RegistroC170 extends RegistroSped
     public int $IndMov;
 
     #[SpedCampos(10, "CST_ICMS", "N", 3, 0, true, 2)]
-    public int $CstIcms;
+    public string $CstIcms;
 
     #[SpedCampos(11, "CFOP", "N", 4, 0, true, 2)]
-    public int $Cfop;
+    public string $Cfop;
 
     #[SpedCampos(12, "COD_NAT", "C", 10, 0, false, 2)]
     public string $CodNat;

@@ -3,6 +3,7 @@
 namespace FiscalBr\EFDFiscal\BlocoC;
 
 use DateTime;
+use FiscalBr\Core\Constantes;
 use FiscalBr\Core\Utils\Decimal;
 use FiscalBr\Core\Sped\SpedCampos;
 use FiscalBr\Core\Sped\RegistroSped;
@@ -84,5 +85,24 @@ class RegistroC190 extends RegistroSped
     public function __construct()
     {
         parent::__construct("C190");
+
+        $this->inicializar();
+    }
+
+    private function inicializar(): void
+    {
+        $this->CstIcms = Constantes::DEFAULT_VALUE_STRING;
+        $this->Cfop = Constantes::DEFAULT_VALUE_STRING;
+        $this->AliqIcms = new Decimal(Constantes::DEFAULT_VALUE_DECIMAL);
+        
+        $this->VlOpr = new Decimal(Constantes::DEFAULT_VALUE_DECIMAL);
+        $this->VlBcIcms = new Decimal(Constantes::DEFAULT_VALUE_DECIMAL);
+        $this->VlIcms = new Decimal(Constantes::DEFAULT_VALUE_DECIMAL);
+        $this->VlBcIcmsSt = new Decimal(Constantes::DEFAULT_VALUE_DECIMAL);
+        $this->VlIcmsSt = new Decimal(Constantes::DEFAULT_VALUE_DECIMAL);
+        $this->VlRedBc = new Decimal(Constantes::DEFAULT_VALUE_DECIMAL);
+        $this->VlIpi = new Decimal(Constantes::DEFAULT_VALUE_DECIMAL);
+
+        $this->CodObs = Constantes::DEFAULT_VALUE_STRING;
     }
 }
