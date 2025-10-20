@@ -56,4 +56,14 @@ class RegistroE001 extends RegistroSped
     {
         $this->IndMov = $value;
     }
+
+    public function adicionarUmRegistroE100(RegistroE100 $value, string $sequencial): void
+    {
+        $this->RegistrosE100[$sequencial] = $value;
+    }
+
+    public function removerUmRegistroE100(string $sequencial): void
+    {
+        unset($this->RegistrosE100[$sequencial]);
+    }
 }

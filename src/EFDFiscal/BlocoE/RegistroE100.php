@@ -21,10 +21,15 @@ class RegistroE100 extends RegistroSped
     #[SpedCampos(3, "DT_FIN", "N", 8, 0, true, 2)]
     public DateTime $DtFin;
 
-    public ?RegistroE110 $RegistroE110 = null;
+    private ?RegistroE110 $registroE110 = null;
 
     public function __construct()
     {
         parent::__construct("E100");
+    }
+
+    public function adicionarRegistroE110(RegistroE110 $value): void
+    {
+        $this->registroE110 = $value;
     }
 }
