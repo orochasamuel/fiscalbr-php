@@ -337,4 +337,16 @@ class RegistroC170 extends RegistroSped
     {
         return $this->Cfop;
     }
+
+    public function comAliqIcms(Decimal|float|string $value): self
+    {
+        $newValue = new Decimal($value);
+        $this->AliqIcms = $newValue;
+        return $this;
+    }
+
+    public function getAliqIcms(): Decimal
+    {
+        return $this->AliqIcms;
+    }
 }

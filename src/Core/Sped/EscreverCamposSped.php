@@ -35,10 +35,10 @@ class EscreverCamposSped
             //return number_format((float)$valorEscrever, $decimalPlaces, ",", ""); // Original -> Problema de precisão
             $valorAtualEmDecimal = new Decimal($valorEscrever, $fieldLength, $decimalPlaces);
             // SE NÃO É OBRIGATÓRIO INFORMAR NÃO DEVE RETORNAR VALOR PARA NÃO "SUJAR" O ARQUIVO
-            if (!$isRequired && $valorAtualEmDecimal->equals(new Decimal(0)))
-            {
-                return '';
-            }
+            // if (!$isRequired && $valorAtualEmDecimal->equals(new Decimal(0)))
+            // {
+            //     return '';
+            // }
             return $valorAtualEmDecimal->format(",", "");
         }
 
