@@ -316,24 +316,24 @@ class RegistroC170 extends RegistroSped
         return $this->IndMov;
     }
 
-    public function comCSTIcms(int $value): self
+    public function comCSTIcms(string $value): self
     {
         $this->CstIcms = $value;
         return $this;
     }
 
-    public function getCSTIcms(): int
+    public function getCSTIcms(): string
     {
         return $this->CstIcms;
     }
 
-    public function comCFOP(int $value): self
+    public function comCFOP(string $value): self
     {
         $this->Cfop = $value;
         return $this;
     }
 
-    public function getCFOP(): int
+    public function getCFOP(): string
     {
         return $this->Cfop;
     }
