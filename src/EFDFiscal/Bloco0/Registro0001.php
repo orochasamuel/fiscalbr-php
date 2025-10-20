@@ -18,10 +18,7 @@ class Registro0001 extends RegistroSped
      */
     private array $Registros0015 = [];
 
-    /** 
-     * @var Registro0100[] 
-     */
-    private array $Registros0100 = [];
+    private ?Registro0100 $registro0100 = null;
 
     /** 
      * @var Registro0150[] 
@@ -101,7 +98,7 @@ class Registro0001 extends RegistroSped
             !is_null($this->registro0002) ||
             !is_null($this->registro0005) ||
             count($this->Registros0015) > 0 ||
-            count($this->Registros0100) > 0 ||
+            !is_null($this->registro0100) ||
             count($this->Registros0150) > 0 ||
             count($this->Registros0190) > 0 ||
             count($this->Registros0200) > 0 ||
@@ -123,6 +120,13 @@ class Registro0001 extends RegistroSped
     public function adicionarUmRegistro0005(Registro0005 $value): void
     {
         $this->registro0005 = $value;
+
+        $this->temMovimento($this->verificaSeBlocoPossuiDados());
+    }
+
+        public function adicionarUmRegistro0100(Registro0100 $value): void
+    {
+        $this->registro0100 = $value;
 
         $this->temMovimento($this->verificaSeBlocoPossuiDados());
     }

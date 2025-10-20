@@ -53,4 +53,111 @@ class Registro0005 extends RegistroSped
         $this->Fax ??= '';
         $this->Email ??= '';
     }
+
+    public function comNomeFantasia(string $valor): self
+    {
+        $this->Fantasia = $valor;
+        return $this;
+    }
+
+    public function getNomeFantasia(): string
+    {
+        return $this->Fantasia;
+    }
+
+    // CEP
+    public function comCep(string $valor): self
+    {
+        $this->Cep = $valor;
+        return $this;
+    }
+
+    public function getCep(): string
+    {
+        return $this->Cep;
+    }
+
+    // Endereço
+    public function comEndereco(string $valor): self
+    {
+        $this->End = $valor;
+        return $this;
+    }
+
+    public function getEndereco(): string
+    {
+        return $this->End;
+    }
+
+    // Número
+    public function comNumero(string $valor): self
+    {
+        $this->Num = $valor;
+        return $this;
+    }
+
+    public function getNumero(): string
+    {
+        return $this->Num;
+    }
+
+    // Complemento
+    public function comComplemento(string $valor): self
+    {
+        $this->Compl = $valor;
+        return $this;
+    }
+
+    public function getComplemento(): string
+    {
+        return $this->Compl;
+    }
+
+    // Bairro
+    public function comBairro(string $valor): self
+    {
+        $this->Bairro = $valor;
+        return $this;
+    }
+
+    public function getBairro(): string
+    {
+        return $this->Bairro;
+    }
+
+    // Telefone
+    public function comFone(string $valor): self
+    {
+        $this->Fone = $valor;
+        return $this;
+    }
+
+    public function getFone(): string
+    {
+        return $this->Fone;
+    }
+
+    // Fax
+    public function comFax(string $valor): self
+    {
+        $this->Fax = $valor;
+        return $this;
+    }
+
+    public function getFax(): string
+    {
+        return $this->Fax;
+    }
+
+    // E-mail
+    public function comEmail(string $valor): self
+    {
+        $this->Email = $valor;
+        return $this;
+    }
+
+    public function getEmail(): string
+    {
+        return $this->Email;
+    }
 }
