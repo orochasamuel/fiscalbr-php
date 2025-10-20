@@ -111,5 +111,25 @@ class RegistroE110 extends RegistroSped
     public function __construct()
     {
         parent::__construct("E110");
+
+        $this->inicializar();
+    }
+
+    private function inicializar(): void
+    {
+        $this->VlTotDebitos = new Decimal(0);
+        $this->VlAjDebitos = new Decimal(0);
+        $this->VlTotAjDebitos = new Decimal(0);
+        $this->VlEstornosCred = new Decimal(0);
+        $this->VlTotCreditos = new Decimal(0);
+        $this->VlAjCreditos = new Decimal(0);
+        $this->VlTotAjCreditos = new Decimal(0);
+        $this->VlEstornosDeb = new Decimal(0);
+        $this->VlSldCredorAnt = new Decimal(0);
+        $this->VlSldApurado = new Decimal(0);
+        $this->VlTotDed = new Decimal(0);
+        $this->VlIcmsRecolher = new Decimal(0);
+        $this->VlSldCredorTransportar = new Decimal(0);
+        $this->DebEsp = new Decimal(0);
     }
 }

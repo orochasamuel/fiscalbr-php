@@ -45,7 +45,7 @@ class RegistroC100 extends RegistroSped
     public ?Decimal $VlDoc;
 
     #[SpedCampos(13, "IND_PGTO", "C", 1, 0, false, 2)]
-    public int $IndPgto;
+    public ?int $IndPgto;
 
     #[SpedCampos(14, "VL_DESC", "N", PHP_INT_MAX, 2, false, 2)]
     public ?Decimal $VlDesc;
@@ -57,7 +57,7 @@ class RegistroC100 extends RegistroSped
     public ?Decimal $VlMerc;
 
     #[SpedCampos(17, "IND_FRT", "C", 1, 0, false, 2)]
-    public int $IndFrt;
+    public ?int $IndFrt;
 
     #[SpedCampos(18, "VL_FRT", "N", PHP_INT_MAX, 2, false, 2)]
     public ?Decimal $VlFrt;
@@ -125,11 +125,11 @@ class RegistroC100 extends RegistroSped
         $this->DtDoc ??= null;
         $this->DtEs ??= null;
         $this->VlDoc ??= null;
-        $this->IndPgto ??= 0;
+        $this->IndPgto ??= null;
         $this->VlDesc ??= null;
         $this->VlAbatNt ??= null;
         $this->VlMerc ??= null;
-        $this->IndFrt ??= 0;
+        $this->IndFrt ??= null;
         $this->VlFrt ??= null;
         $this->VlSeg ??= null;
         $this->VlOutDa ??= null;
