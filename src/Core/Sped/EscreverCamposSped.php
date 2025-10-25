@@ -77,7 +77,28 @@ class EscreverCamposSped
 
     private static function obtemListaComPropriedadesOrdenadas(\ReflectionClass $tipoAtual): array
     {
-        $properties = $tipoAtual->getProperties(\ReflectionProperty::IS_PUBLIC | \ReflectionProperty::IS_PROTECTED);
+        //$properties = $tipoAtual->getProperties(\ReflectionProperty::IS_PUBLIC | \ReflectionProperty::IS_PROTECTED);
+        // if ($tipoAtual->name === 'FiscalBr\EFDFiscal\BlocoC\RegistroC300')
+        //     echo 'Obtendo lista de propriedades do Registro C300...';
+
+        $properties = array_filter(
+            $tipoAtual->getProperties(\ReflectionProperty::IS_PUBLIC | \ReflectionProperty::IS_PROTECTED),
+            function (\ReflectionProperty $property) {
+                $type = $property->getType();
+
+                // Não mantém se não tiver tipo declarado
+                if (!$type) {
+                    return false;
+                }
+
+                // Ignora se o tipo for 'array'
+                if ($type instanceof \ReflectionNamedType && $type->getName() === 'array') {
+                    return false;
+                }
+
+                return true;
+            }
+        );
 
         usort($properties, function (\ReflectionProperty $a, \ReflectionProperty $b) {
             $attrsA = $a->getAttributes(SpedCampos::class);

@@ -69,12 +69,12 @@ class RegistroC300 extends RegistroSped
     /** 
      * @var RegistroC310[] 
      */
-    private array $RegistrosC310 = [];
+    public array $RegistrosC310 = [];
 
     /** 
      * @var RegistroC320[] 
      */
-    private array $RegistrosC320 = [];
+    public array $RegistrosC320 = [];
 
     public function __construct()
     {
