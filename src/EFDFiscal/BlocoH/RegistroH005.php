@@ -18,7 +18,7 @@ class RegistroH005 extends RegistroSped
     /// <summary>
     ///     Valor total do estoque
     /// </summary>
-    #[SpedCampos(3, "VL_INV", "N", 0, 2, true, 2)]
+    #[SpedCampos(3, "VL_INV", "N", 15, 2, true, 2)]
     public Decimal $VlInv;
 
     /// <summary>
@@ -40,5 +40,20 @@ class RegistroH005 extends RegistroSped
     public function __construct()
     {
         parent::__construct("H005");
+    }
+
+    public function obterTodosRegistrosH010(): array
+    {
+        return $this->RegistrosH010;
+    }
+
+    public function adicionarUmRegistroH010(RegistroH010 $value, string $sequencial): void
+    {
+        $this->RegistrosH010[$sequencial] = $value;
+    }
+
+    public function removerUmRegistroH010(string $sequencial): void
+    {
+        unset($this->RegistrosH010[$sequencial]);
     }
 }

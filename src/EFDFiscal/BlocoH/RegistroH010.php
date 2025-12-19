@@ -7,7 +7,7 @@ use FiscalBr\Core\Utils\Decimal;
 use FiscalBr\Core\Sped\SpedCampos;
 use FiscalBr\Core\Sped\RegistroSped;
 
-class RegistroH005 extends RegistroSped
+class RegistroH010 extends RegistroSped
 {
     /// <summary>
     ///     Código do item (campo 02 do Registro 0200)
@@ -24,19 +24,19 @@ class RegistroH005 extends RegistroSped
     /// <summary>
     ///     Quantidade do item
     /// </summary>
-    #[SpedCampos(4, "QTD", "N", 0, 3, true, 2)]
+    #[SpedCampos(4, "QTD", "N", 15, 3, true, 2)]
     public Decimal $Qtd;
 
     /// <summary>
     ///     Valor unitário do item
     /// </summary>
-    #[SpedCampos(5, "VL_UNIT", "N", 0, 6, true, 2)]
+    #[SpedCampos(5, "VL_UNIT", "N", 15, 6, true, 2)]
     public Decimal $VlUnit;
 
     /// <summary>
     ///     Valor do item
     /// </summary>
-    #[SpedCampos(6, "VL_ITEM", "N", 0, 2, true, 2)]
+    #[SpedCampos(6, "VL_ITEM", "N", 15, 2, true, 2)]
     public Decimal $VlItem;
 
     /// <summary>
@@ -55,7 +55,7 @@ class RegistroH005 extends RegistroSped
     /// <summary>
     ///     Descrição complementar.
     /// </summary>
-    #[SpedCampos(9, "TXT_COMPL", "C", 0, 0, false, 2)]
+    #[SpedCampos(9, "TXT_COMPL", "C", 99, 0, false, 2)]
     public string $TxtCompl;
 
     /// <summary>
@@ -67,7 +67,7 @@ class RegistroH005 extends RegistroSped
     /// <summary>
     ///     Valor do item para efeitos do Imposto de Renda.
     /// </summary>
-    #[SpedCampos(11, "VL_ITEM_IR", "N", 0, 2, false, 9)]
+    #[SpedCampos(11, "VL_ITEM_IR", "N", 15, 2, false, 9)]
     public Decimal $VlItemIr;
 
     /** 
