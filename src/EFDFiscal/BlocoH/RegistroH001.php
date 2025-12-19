@@ -13,7 +13,7 @@ class RegistroH001 extends RegistroSped
     /** 
      * @var RegistroH005[]
      */
-    private array $RegistrosH005 = [];
+    public array $RegistrosH005 = [];
 
     public function __construct(bool $temMovimento = false)
     {
